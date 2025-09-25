@@ -38,6 +38,7 @@
       </ul>
       <a href="https://github.com/rushinski/Discord-Bot-Unity" 
         target="_blank" 
+        rel="noopener noreferrer"
         class="github-btn" 
         aria-label="View Unity Bot GitHub Repository">
         GitHub Repo
@@ -66,7 +67,8 @@
     <ul>
       <li><strong>Leaderboard:</strong> Public command showing the top 10 members.</li>
       <li><strong>Level Progress:</strong> Personal progress tracking at any time.</li>
-      <li><strong>DM Notifications:</strong> Get notified when you level up or down.</li>
+      <li><strong>Notifications:</strong> Users can choose to enable or disable level-up notifications using
+      <code>/enable-levelup</code> and <code>/disable-levelup</code>.</li>
     </ul>
 
     <!-- Screenshots -->
@@ -99,8 +101,9 @@
     <h3 style="margin-top:3rem; color:#a78bfa;">⚙️ Admin Controls</h3>
     <p>Admins have full control over leveling progression:</p>
     <ul>
-      <li>Grant or remove XP with simple commands.</li>
-      <li>Reset everyone’s progress when starting fresh.</li>
+      <li><code>/add-messages &lt;user&gt; &lt;amount&gt;</code> → Manually grant XP.</li>
+      <li><code>/remove-messages &lt;user&gt; &lt;amount&gt;</code> → Remove XP.</li>
+      <li><code>/reset-all-messages</code> → Reset everyone’s progress.</li>
     </ul>
     <div class="card-grid">
       <div class="card"><img src="media/Screenshot-add-messages.png" alt="Add Messages Screenshot" loading="lazy" decoding="async"></div>
@@ -131,7 +134,7 @@
           <li><strong>Customizable Categories:</strong> Assign tickets to specific categories for better organization.</li>
           <li><strong>Support Roles:</strong> Designate staff roles that automatically gain access to tickets.</li>
           <li><strong>Ticket Transcripts:</strong> Automatically log and save full transcripts of closed tickets.</li>
-          <li><strong>Multiple Ticket Types:</strong> Configure tickets for support, applications, reports, or other needs.</li>
+          <li><strong>Multiple Ticket Types:</strong> Configure tickets for support, applications, reports, or other categories. Each type can be customized with its own description and purpose.</li>
           <li><strong>Close & Archive:</strong> Admins can quickly close tickets and generate a transcript for reference.</li>
         </ul>
       </div>
@@ -154,6 +157,8 @@
           <li><strong>Secure Role Assignment:</strong> Verified members are automatically given a designated role.</li>
           <li><strong>Streamlined Process:</strong> Reduces spam and ensures only legitimate users gain access.</li>
           <li><strong>Configurable Messaging:</strong> Fully customize the verification instructions and role assignment process.</li>
+          <li><strong>Admin Verification:</strong> Admins can open a verification ticket for a user with<code>/verify-user</code>, assigning the verified role once approved.</li>
+
         </ul>
       </div>
       <div class="visual">
@@ -177,7 +182,7 @@
       <div class="text">
         <ul>
           <li><strong>Self-Assigned Roles:</strong> Members can pick their roles with a single reaction or button press.</li>
-          <li><strong>Customizable Menus:</strong> Easily configure menus with multiple roles and unique labels.</li>
+          <li><strong>Customizable Menus:</strong> Configure menus using emoji-to-role mappings (e.g.,<code>🦁:Africa, 🐼:Asia</code>) with unique labels and descriptions.</li>
           <li><strong>Instant Role Updates:</strong> Roles are applied or removed immediately when a user reacts or unreacts.</li>
           <li><strong>Unlimited Configurations:</strong> Create as many reaction role menus as needed for your server.</li>
           <li><strong>Community Organization:</strong> Perfect for assigning interests, access levels, or event roles.</li>
@@ -255,9 +260,9 @@
       <div class="text">
         <p>Customize Unity to fit your server’s needs with easy configuration commands:</p>
         <ul>
-          <li>Configure moderation logs, join/leave logs, welcome channels, and more.</li>
+          <li>Configure moderation logs, join/leave logs, welcome channels, and level-up logs.</li>
+          <li>Set UTC time and date trackers in voice channels.</li>
           <li>Set up reaction roles for community organization.</li>
-          <li>Track role membership counts in real time via voice channels.</li>
           <li>Configure a complete ticket system with support roles and transcripts.</li>
         </ul>
       </div>
@@ -343,8 +348,8 @@
       <div class="text">
         <p>Unity also provides helpful tools for everyday use:</p>
         <ul>
-          <li><strong>UTC Converter:</strong> Convert local times to UTC instantly.</li>
-          <li><strong>Say Command:</strong> Have the bot repeat any message.</li>
+          <li><strong>/get-utc &lt;timezone&gt; &lt;time&gt; [date]</strong> → Convert a local time and date into UTC (e.g.,<code>/get-utc Tokyo 14:30 2025-01-10</code>).</li>
+          <li><strong>/say</strong> → Opens a modal where you type a message the bot will send (Admin only).</li>
           <li><strong>Giveaway Command:</strong> Run server giveaways by setting the prize, how many winners, and the duration.</li>
         </ul>
 
@@ -375,46 +380,50 @@
     <div class="commands-list">
       <h3>🛡️ Moderation</h3>
       <ul>
-        <li><code>/clear &lt;amount&gt;</code> → Bulk delete messages (Admin only)</li>
-        <li><code>/id-ban &lt;userID&gt;</code> → Ban a user by ID (Admin only)</li>
-        <li><code>/id-unban &lt;userID&gt;</code> → Unban a user by ID (Admin only)</li>
-        <li><code>/strike &lt;user&gt;</code> → Give a user a strike (Admin only)</li>
+        <li><code>/clear &lt;amount&gt;</code> → Delete 1–100 recent messages in the channel (Admin, Manage Messages).</li>
+        <li><code>/id-ban &lt;userID&gt; [reason]</code> → Ban a user by ID with optional reason (Admin, Ban Members).</li>
+        <li><code>/id-unban &lt;userID&gt;</code> → Unban a user by ID (Admin, Ban Members).</li>
+        <li><code>/strike &lt;user&gt;</code> → Give a user a strike (3 strikes = ban) (Admin, Ban Members).</li>
       </ul>
 
       <h3>🏆 Levels</h3>
       <ul>
-        <li><code>/leaderboard</code> → Show top 10 XP earners (Everyone)</li>
-        <li><code>/level-progress</code> → Show personal progress (Everyone)</li>
-        <li><code>/add-messages &lt;user&gt; &lt;amount&gt;</code> → Grant XP (Admin only)</li>
-        <li><code>/remove-messages &lt;user&gt; &lt;amount&gt;</code> → Remove XP (Admin only)</li>
-        <li><code>/reset-all-messages</code> → Reset all XP (Admin only)</li>
-        <li><code>/enable-levelup</code> → Enable level-up notifications (Admin only)</li>
-        <li><code>/disable-levelup</code> → Disable level-up notifications (Admin only)</li>
+        <li><code>/leaderboard</code> → Show the top 10 users by activity.</li>
+        <li><code>/level-progress</code> → View your level and progress toward the next milestone.</li>
+        <li><code>/add-messages &lt;user&gt; &lt;amount&gt;</code> → Manually add messages to a user’s total (Admin).</li>
+        <li><code>/remove-messages &lt;user&gt; &lt;amount&gt;</code> → Remove messages from a user’s total (Admin).</li>
+        <li><code>/reset-all-messages</code> → Reset all user levels/message counts (Admin).</li>
+        <li><code>/enable-levelup</code> → Turn ON level-up notifications.</li>
+        <li><code>/disable-levelup</code> → Turn OFF level-up notifications.</li>
       </ul>
 
       <h3>🔧 Configuration & Tickets</h3>
       <ul>
-        <li><code>/configure</code> → Set channels for logs, welcomes, UTC, etc. (Admin only)</li>
-        <li><code>/configure-reaction-roles</code> → Set up reaction role menus (Admin only)</li>
-        <li><code>/configure-role-count</code> → Track role counts in voice channels (Admin only)</li>
-        <li><code>/configure-ticket-system</code> → Configure ticket categories & roles (Admin only)</li>
-        <li><code>/verify-user &lt;user&gt;</code> → Open a verification ticket (Admin only)</li>
-        <li><code>/unconfigure</code> → Remove configuration (Admin only)</li>
+        <li><code>/configure &lt;field&gt; &lt;channelID&gt;</code> → Configure logs, welcomes, level-ups, or UTC trackers (Admin).</li>
+        <li><code>/configure-reaction-roles &lt;category&gt; &lt;description&gt; &lt;emoji:role&gt;</code> → Create/update a reaction role menu (Admin).</li>
+        <li><code>/configure-role-count &lt;role&gt; &lt;channelID&gt; &lt;label&gt; [emoji]</code> → Track how many users have a role in a voice channel (Admin).</li>
+        <li><code>/configure-ticket-system &lt;field&gt; &lt;value&gt;</code> → Configure ticket system roles, categories, or transcripts (Admin).</li>
+        <li><code>/unconfigure &lt;field&gt;</code> → Remove a configured log/welcome/UTC setting (Admin).</li>
+        <li><code>/unconfigure-reaction-roles &lt;category&gt; [delete-message]</code> → Remove a reaction role category (Admin).</li>
+        <li><code>/unconfigure-role-count &lt;role&gt; [delete-channel]</code> → Remove a role count tracker (Admin).</li>
       </ul>
 
       <h3>🎲 Utility</h3>
       <ul>
-        <li><code>/get-utc &lt;timezone&gt;</code> → Convert timezones to UTC (Everyone)</li>
-        <li><code>/say &lt;text&gt;</code> → Repeat a message (Everyone)</li>
+        <li><code>/get-utc &lt;timezone&gt; &lt;time&gt; [date]</code> → Convert a local time/date into UTC.</li>
+        <li><code>/say</code> → Opens a modal where you type a message the bot will send (Admin).</li>
+        <li><code>/verify-user &lt;user&gt;</code> → Open a verification ticket for a user (Admin).</li>
       </ul>
 
       <h3>📢 Send Commands</h3>
       <ul>
-        <li><code>/send-giveaway-message</code> → Send a giveaway embed (Admin only)</li>
-        <li><code>/send-roles-select</code> → Send role selection menu (Admin only)</li>
-        <li><code>/send-rules</code> → Send rules embed (Admin only)</li>
-        <li><code>/send-ticket-setup</code> → Send ticket setup message (Admin only)</li>
-        <li><code>/send-verification</code> → Send verification embed (Admin only)</li>
+        <li><code>/send-giveaway-message &lt;title&gt; &lt;duration&gt; &lt;prize&gt; &lt;winners&gt;</code> →
+        Start a giveaway embed (Admin only).</li>
+        <li><code>/send-role-select</code> → Deploy role selection embeds (Admin only).</li>
+        <li><code>/send-rules &lt;rules&gt;</code> → Send a rules embed. Rules must be separated with
+        <code>|</code> (e.g., <code>Respect others | No spam | Be kind</code>) (Admin only).</li>
+        <li><code>/send-ticket-setup</code> → Deploy the ticket system setup embed (Admin only).</li>
+        <li><code>/send-verification</code> → Send the verification panel to the channel (Admin only).</li>
       </ul>
     </div>
   </section>
