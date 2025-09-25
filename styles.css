@@ -576,4 +576,32 @@ footer a:hover {
   section {
     padding: 2.5rem 1rem;
   }
+
+  /* Header adjustments */
+  header {
+    padding: 2rem 1rem; /* reduce vertical padding */
+    text-align: center;
+  }
+
+  header img {
+    width: 80px; /* smaller avatar */
+    margin-bottom: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* smaller title */
+    margin-bottom: 0.3rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra small phones (≤480px) */
+@media (max-width: 480px) {
+  header p {
+    display: none; /* hide tagline for compact view */
+  }
 }
