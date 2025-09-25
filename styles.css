@@ -526,6 +526,14 @@ footer a:hover {
   transition: transform 0.2s
 }
 
+/* Phones (≤600px): disable sticky */
+@media (max-width: 600px) {
+  .navbar {
+    position: relative;
+    top: auto;
+  }
+}
+
 /* ---------- Responsive Adjustments ---------- */
 
 /* Tablet and below (≤1200px) */
