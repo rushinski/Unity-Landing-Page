@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unity Bot - Landing Page</title>
+  <meta name="description" content="Unity Bot: Your all-in-one Discord server companion with moderation, leveling, tickets, logging, and more.">
+  <meta property="og:title" content="Unity Bot - Discord Server Companion">
+  <meta property="og:description" content="Automate, engage, and secure your Discord community with Unity Bot.">
+  <meta property="og:image" content="media/unity-avatar.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="media/unity-avatar.jpg" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <header>
+    <img src="media/unity-avatar.jpg" alt="Unity Bot Logo" loading="lazy" decoding="async">
+    <h1>Unity</h1>
+    <p>Your all-in-one Discord server companion</p>
+  </header>
+
+  <!-- Sticky Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#leveling">Leveling</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+        <li><a href="#reaction-roles">Reaction Roles</a></li>
+        <li><a href="#moderation">Moderation</a></li>
+        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#logging">Logging</a></li>
+        <li><a href="#utility">Utilities</a></li>
+        <li><a href="#commands-list">Commands List</a></li>
+      </ul>
+      <a href="https://github.com/rushinski/Discord-Bot-Unity" 
+        target="_blank" 
+        class="github-btn" 
+        aria-label="View Unity Bot GitHub Repository">
+        GitHub Repo
+      </a>
+    </div>
+  </nav>
+
+  <!-- Features Overview -->
+  <section id="features">
+    <h2>⚡ Features</h2>
+    <p>Unity brings powerful automation, moderation, and engagement tools to your Discord community. Here’s what makes it stand out:</p>
+    <ul>
+      <li>🔧 Easy setup for logs, welcome messages, tickets, and more.</li>
+      <li>🛡️ Robust moderation tools for a safer server.</li>
+      <li>🏆 Leveling and XP rewards to engage your members.</li>
+      <li>📢 Reaction roles and role counters for community organization.</li>
+      <li>🤖 Background automation for smooth server management.</li>
+    </ul>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Leveling System -->
+  <section id="leveling">
+    <h2>🏆 Leveling System</h2>
+    <p>Keep your community active with Unity’s leveling system:</p>
+    <ul>
+      <li><strong>Leaderboard:</strong> Public command showing the top 10 members.</li>
+      <li><strong>Level Progress:</strong> Personal progress tracking at any time.</li>
+      <li><strong>DM Notifications:</strong> Get notified when you level up or down.</li>
+    </ul>
+
+    <!-- Screenshots -->
+    <div class="card-grid">
+      <div class="card"><img src="media/Screenshot-level-leaderboard.png" alt="Leaderboard Screenshot" loading="lazy" decoding="async"></div>
+      <div class="card"><img src="media/Screenshot-level-progress.png" alt="Level Progress Screenshot" loading="lazy" decoding="async"></div>
+    </div>
+
+    <!-- Level Progression -->
+    <h3 style="margin-top:3rem; color:#a78bfa;">📈 Level Progression</h3>
+    <ul class="level-list">
+      <li><strong>Newcomer:</strong> 0 messages</li>
+      <li><strong>Active Participant:</strong> 10 messages</li>
+      <li><strong>Contributor:</strong> 25 messages</li>
+      <li><strong>Engaged Member:</strong> 50 messages</li>
+      <li><strong>Dedicated Member:</strong> 100 messages</li>
+      <li><strong>Community Advocate:</strong> 200 messages</li>
+      <li><strong>Collaborator:</strong> 350 messages</li>
+      <li><strong>Team Player:</strong> 500 messages</li>
+      <li><strong>Leader-in-Training:</strong> 750 messages</li>
+      <li><strong>Community Leader:</strong> 1000 messages</li>
+      <li><strong>Mentor:</strong> 1500 messages</li>
+      <li><strong>Trusted Voice:</strong> 2000 messages</li>
+      <li><strong>Influencer:</strong> 3000 messages</li>
+      <li><strong>Visionary:</strong> 5000 messages</li>
+      <li><strong>Pioneer:</strong> 10000 messages</li>
+    </ul>
+    
+    <!-- Admin Controls -->
+    <h3 style="margin-top:3rem; color:#a78bfa;">⚙️ Admin Controls</h3>
+    <p>Admins have full control over leveling progression:</p>
+    <ul>
+      <li>Grant or remove XP with simple commands.</li>
+      <li>Reset everyone’s progress when starting fresh.</li>
+    </ul>
+    <div class="card-grid">
+      <div class="card"><img src="media/Screenshot-add-messages.png" alt="Add Messages Screenshot" loading="lazy" decoding="async"></div>
+      <div class="card"><img src="media/Screenshot-remove-messages.png" alt="Remove Messages Screenshot" loading="lazy" decoding="async"></div>
+      <div class="card"><img src="media/Screenshot-reset-all.png" alt="Reset All Screenshot" loading="lazy" decoding="async"></div>
+    </div>
+
+    <!-- Personal Settings -->
+    <h3 style="margin-top:3rem; color:#a78bfa;">🔔 Personal Settings</h3>
+    <p>Each user can choose whether to see level-up notifications:</p>
+    <ul>
+      <li><strong>/enable-levelup</strong> → Enable level-up notifications</li>
+      <li><strong>/disable-levelup</strong> → Disable level-up notifications</li>
+    </ul>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Tickets & Verification -->
+  <section class="tickets" id="tickets">
+    <h2>🎟️ Tickets & Verification</h2>
+    <p>Unity provides a robust ticketing and verification system to keep your community organized and secure:</p>
+
+    <!-- Ticket System -->
+    <div class="ticket-block">
+      <div class="text">
+        <h3 style="margin-top:2rem; color:#a78bfa;">📝 Ticket System</h3>
+        <ul>
+          <li><strong>Customizable Categories:</strong> Assign tickets to specific categories for better organization.</li>
+          <li><strong>Support Roles:</strong> Designate staff roles that automatically gain access to tickets.</li>
+          <li><strong>Ticket Transcripts:</strong> Automatically log and save full transcripts of closed tickets.</li>
+          <li><strong>Multiple Ticket Types:</strong> Configure tickets for support, applications, reports, or other needs.</li>
+          <li><strong>Close & Archive:</strong> Admins can quickly close tickets and generate a transcript for reference.</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <div class="card">
+          <video autoplay loop muted playsinline loading="lazy" preload="none">
+            <source src="media/ticket-system-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verification Tickets -->
+    <div class="ticket-block">
+      <div class="text">
+        <h3 style="margin-top:2rem; color:#a78bfa;">✅ Verification Tickets</h3>
+        <ul>
+          <li><strong>Automated Verification:</strong> Require new users to open a verification ticket before joining the community fully.</li>
+          <li><strong>Secure Role Assignment:</strong> Verified members are automatically given a designated role.</li>
+          <li><strong>Streamlined Process:</strong> Reduces spam and ensures only legitimate users gain access.</li>
+          <li><strong>Configurable Messaging:</strong> Fully customize the verification instructions and role assignment process.</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <div class="card">
+          <video autoplay loop muted playsinline loading="lazy" preload="none">
+            <source src="media/verification-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Reaction Roles -->
+  <section class="reaction-roles" id="reaction-roles">
+    <h2>📌 Reaction Roles System</h2>
+    <p>Unity makes it simple for members to self-assign roles, helping your community stay organized and engaged:</p>
+
+    <div class="reaction-block">
+      <div class="text">
+        <ul>
+          <li><strong>Self-Assigned Roles:</strong> Members can pick their roles with a single reaction or button press.</li>
+          <li><strong>Customizable Menus:</strong> Easily configure menus with multiple roles and unique labels.</li>
+          <li><strong>Instant Role Updates:</strong> Roles are applied or removed immediately when a user reacts or unreacts.</li>
+          <li><strong>Unlimited Configurations:</strong> Create as many reaction role menus as needed for your server.</li>
+          <li><strong>Community Organization:</strong> Perfect for assigning interests, access levels, or event roles.</li>
+        </ul>
+      </div>
+
+      <div class="visual">
+        <div class="card">
+          <video autoplay loop muted playsinline loading="lazy" preload="none">
+            <source src="media/reaction-roles-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Moderation -->
+  <section class="moderation" id="moderation">
+    <h2>🛡️ Moderation</h2>
+    <div class="moderation-content">
+      <!-- Left Column -->
+      <div class="text">
+        <p>Unity provides powerful moderation tools to help you manage your community:</p>
+        <ul>
+          <li><strong>Clear Messages:</strong> Bulk delete unwanted messages.</li>
+          <li><strong>ID Ban/Unban:</strong> Ban/unban users by their Discord ID.</li>
+          <li><strong>Customizable Rules:</strong> Create and display fully tailored server rules with embeds.</li>
+          <li><strong>AutoBan & Strikes:</strong> Catches banned words and enforces strikes automatically</li>
+        </ul>
+
+        <!-- Rules Embed + Command Screenshots -->
+        <div class="card-grid rules-visuals">
+          <div class="card"><img src="media/Screenshot-rules-embed.png" alt="Rules Embed Screenshot" loading="lazy" decoding="async"></div>
+          <div class="card"><img src="media/Screenshot-rules-command.png" alt="Rules Command Screenshot" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="visuals">
+        <div class="card clear-visual">
+          <video autoplay loop muted playsinline loading="lazy" preload="none">
+            <source src="media/clear-demo.mp4" type="video/mp4">
+            <img src="media/clear-demo.gif" alt="Clear Messages Demo">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Severity Levels subsection -->
+    <h3 style="margin-top:3rem; color:#a78bfa;">⚠️ Severity Levels</h3>
+    <ul class="severity-list">
+      <li><strong>Low:</strong> Issues a warning (two warnings escalate into one strike).</li>
+      <li><strong>Medium:</strong> Directly issues one strike.</li>
+      <li><strong>High:</strong> Directly issues two strikes.</li>
+      <li><strong>Critical:</strong> Immediate ban from the server.</li>
+    </ul>
+
+    <!-- Strike + AutoBan visuals -->
+    <div class="card-grid strike-autoban">
+      <div class="card"><img src="media/Screenshot-strike.png" alt="Strike Screenshot" loading="lazy" decoding="async"></div>
+      <div class="card"><img src="media/Screenshot-banned-word.png" alt="AutoBan Screenshot" loading="lazy" decoding="async"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Server Setup & Configuration -->
+  <section class="configuration" id="configuration">
+    <h2>🔧 Server Setup & Configuration</h2>
+
+    <div class="configuration-grid">
+      <!-- TEXT (left) -->
+      <div class="text">
+        <p>Customize Unity to fit your server’s needs with easy configuration commands:</p>
+        <ul>
+          <li>Configure moderation logs, join/leave logs, welcome channels, and more.</li>
+          <li>Set up reaction roles for community organization.</li>
+          <li>Track role membership counts in real time via voice channels.</li>
+          <li>Configure a complete ticket system with support roles and transcripts.</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT (wide but short images) -->
+      <div class="side-visuals">
+        <div class="card"><img src="media/configure-reaction-roles.png" alt="Reaction Roles Screenshot" loading="lazy" decoding="async"></div>
+        <div class="card"><img src="media/configure-role-count.png" alt="Role Count Screenshot" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+
+    <!-- BOTTOM (taller images) -->
+    <div class="bottom-visuals">
+      <div class="card"><img src="media/configure-logs.png" alt="Configure Logs Screenshot" loading="lazy" decoding="async"></div>
+      <div class="card"><img src="media/configure-ticket-system.png" alt="Ticket System Screenshot" loading="lazy" decoding="async"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Logging and Tracking Capabilities -->
+  <section class="logging" id="logging">
+    <h2>📊 Logging & Tracking Capabilities</h2>
+    <p>Unity helps you stay on top of everything happening in your server with detailed logs and real-time tracking tools:</p>
+    
+    <!-- Logging Features -->
+    <h3 style="margin-top:2rem; color:#a78bfa;">📝 Logging</h3>
+    <div class="logging-content">
+      <!-- Text -->
+      <div class="text">
+        <ul>
+          <li><strong>Edit Logging:</strong> Capture when a message is edited, showing before and after.</li>
+          <li><strong>Deleted Message Logging:</strong> Record when messages are deleted.</li>
+          <li><strong>Banned Word Logging:</strong> Automatically log when a user triggers a banned word.</li>
+          <li><strong>Level-Up Logging:</strong> Notify when users level up or down.</li>
+          <li><strong>Welcome Message Logging:</strong> Send configurable welcome messages in a specific channel.</li>
+          <li><strong>Join & Leave Logging:</strong> Track members joining, leaving, being kicked, or banned (with reason).</li>
+          <li><strong>Ticket Transcription Logging:</strong> Save transcripts of ticket conversations.</li>
+        </ul>
+      </div>
+
+      <!-- First 4 screenshots (aligned with text) -->
+      <div class="visuals">
+        <div class="card-grid four-grid">
+          <div class="card"><img src="media/logging-edits.png" alt="Edit Logging Screenshot" loading="lazy" decoding="async"></div>
+          <div class="card"><img src="media/logging-deleted.png" alt="Deleted Message Logging Screenshot" loading="lazy" decoding="async"></div>
+          <div class="card"><img src="media/logging-bannedword.png" alt="Banned Word Logging Screenshot" loading="lazy" decoding="async"></div>
+          <div class="card"><img src="media/logging-levelup.png" alt="Level-Up Logging Screenshot" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Remaining 4 screenshots (below text + visuals) -->
+    <div class="card-grid four-grid bottom-logging">
+      <div class="card"><img src="media/logging-welcome.png" alt="Welcome Message Logging Screenshot" loading="lazy" decoding="async"></div>
+      <div class="card"><img src="media/logging-join.png" alt="Join Logging Screenshot" loading="lazy" decoding="async"></div>
+      <div class="card"><img src="media/logging-leave.png" alt="Leave Logging Screenshot" loading="lazy" decoding="async"></div>
+      <div class="card"><img src="media/logging-ticket.png" alt="Ticket Transcription Screenshot" loading="lazy" decoding="async"></div>
+    </div>
+
+    <!-- Tracking Features -->
+    <h3 style="margin-top:2rem; color:#a78bfa;">📈 Tracking</h3>
+    <div class="tracking-content">
+      <div class="text">
+        <ul>
+          <li><strong>UTC Time & Date:</strong> Configure a channel to always show the current UTC time and date.</li>
+          <li><strong>Role Count Tracking:</strong> Display how many members hold a specific role in real-time.<br>
+            <em>Example:</em> If 10 users have the role <code>Money</code>, the channel name updates to show “Money: 10”.</em>
+          </li>
+        </ul>
+      </div>
+      <div class="visuals">
+        <div class="card"><img src="media/tracking-utc-rolecount.png" alt="UTC & Role Count Tracking Screenshot" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Utility Commands -->
+  <section class="utility" id="utility">
+    <h2>🎲 Utility Commands</h2>
+    <div class="utility-content">
+      <!-- LEFT: Text + Giveaways -->
+      <div class="text">
+        <p>Unity also provides helpful tools for everyday use:</p>
+        <ul>
+          <li><strong>UTC Converter:</strong> Convert local times to UTC instantly.</li>
+          <li><strong>Say Command:</strong> Have the bot repeat any message.</li>
+          <li><strong>Giveaway Command:</strong> Run server giveaways by setting the prize, how many winners, and the duration.</li>
+        </ul>
+
+        <!-- Giveaway Screenshots -->
+        <div class="card-grid giveaway-visuals">
+          <div class="card"><img src="media/Screenshot-giveaway-setup.png" alt="Giveaway Setup Screenshot" loading="lazy" decoding="async"></div>
+          <div class="card"><img src="media/Screenshot-giveaway-result.png" alt="Giveaway Result Screenshot" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: UTC Converter GIF -->
+      <div class="visuals">
+        <div class="card utc-visual">
+          <video autoplay loop muted playsinline loading="lazy" preload="none">
+            <source src="media/get-utc-demo.mp4" type="video/mp4">
+            <img src="media/get-utc-demo.gif" alt="UTC Converter Demo">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- Commands Reference -->
+  <section id="commands-list">
+    <h2>📜 Commands List</h2>
+    <div class="commands-list">
+      <h3>🛡️ Moderation</h3>
+      <ul>
+        <li><code>/clear &lt;amount&gt;</code> → Bulk delete messages (Admin only)</li>
+        <li><code>/id-ban &lt;userID&gt;</code> → Ban a user by ID (Admin only)</li>
+        <li><code>/id-unban &lt;userID&gt;</code> → Unban a user by ID (Admin only)</li>
+        <li><code>/strike &lt;user&gt;</code> → Give a user a strike (Admin only)</li>
+      </ul>
+
+      <h3>🏆 Levels</h3>
+      <ul>
+        <li><code>/leaderboard</code> → Show top 10 XP earners (Everyone)</li>
+        <li><code>/level-progress</code> → Show personal progress (Everyone)</li>
+        <li><code>/add-messages &lt;user&gt; &lt;amount&gt;</code> → Grant XP (Admin only)</li>
+        <li><code>/remove-messages &lt;user&gt; &lt;amount&gt;</code> → Remove XP (Admin only)</li>
+        <li><code>/reset-all-messages</code> → Reset all XP (Admin only)</li>
+        <li><code>/enable-levelup</code> → Enable level-up notifications (Admin only)</li>
+        <li><code>/disable-levelup</code> → Disable level-up notifications (Admin only)</li>
+      </ul>
+
+      <h3>🔧 Configuration & Tickets</h3>
+      <ul>
+        <li><code>/configure</code> → Set channels for logs, welcomes, UTC, etc. (Admin only)</li>
+        <li><code>/configure-reaction-roles</code> → Set up reaction role menus (Admin only)</li>
+        <li><code>/configure-role-count</code> → Track role counts in voice channels (Admin only)</li>
+        <li><code>/configure-ticket-system</code> → Configure ticket categories & roles (Admin only)</li>
+        <li><code>/verify-user &lt;user&gt;</code> → Open a verification ticket (Admin only)</li>
+        <li><code>/unconfigure</code> → Remove configuration (Admin only)</li>
+      </ul>
+
+      <h3>🎲 Utility</h3>
+      <ul>
+        <li><code>/get-utc &lt;timezone&gt;</code> → Convert timezones to UTC (Everyone)</li>
+        <li><code>/say &lt;text&gt;</code> → Repeat a message (Everyone)</li>
+      </ul>
+
+      <h3>📢 Send Commands</h3>
+      <ul>
+        <li><code>/send-giveaway-message</code> → Send a giveaway embed (Admin only)</li>
+        <li><code>/send-roles-select</code> → Send role selection menu (Admin only)</li>
+        <li><code>/send-rules</code> → Send rules embed (Admin only)</li>
+        <li><code>/send-ticket-setup</code> → Send ticket setup message (Admin only)</li>
+        <li><code>/send-verification</code> → Send verification embed (Admin only)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Unity Bot</p>
+  </footer>
+</body>
+</html>
