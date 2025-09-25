@@ -67,8 +67,6 @@
     <ul>
       <li><strong>Leaderboard:</strong> Public command showing the top 10 members.</li>
       <li><strong>Level Progress:</strong> Personal progress tracking at any time.</li>
-      <li><strong>Notifications:</strong> Users can choose to enable or disable level-up notifications using
-      <code>/enable-levelup</code> and <code>/disable-levelup</code>.</li>
     </ul>
 
     <!-- Screenshots -->
@@ -101,9 +99,9 @@
     <h3 style="margin-top:3rem; color:#a78bfa;">⚙️ Admin Controls</h3>
     <p>Admins have full control over leveling progression:</p>
     <ul>
-      <li><code>/add-messages &lt;user&gt; &lt;amount&gt;</code> → Manually grant XP.</li>
-      <li><code>/remove-messages &lt;user&gt; &lt;amount&gt;</code> → Remove XP.</li>
-      <li><code>/reset-all-messages</code> → Reset everyone’s progress.</li>
+      <li>/add-messages → Manually grant XP.</li>
+      <li>/remove-messages → Remove XP.</li>
+      <li>/reset-all-messages → Reset everyone’s progress.</li>
     </ul>
     <div class="card-grid">
       <div class="card"><img src="media/Screenshot-add-messages.png" alt="Add Messages Screenshot" loading="lazy" decoding="async"></div>
@@ -157,7 +155,7 @@
           <li><strong>Secure Role Assignment:</strong> Verified members are automatically given a designated role.</li>
           <li><strong>Streamlined Process:</strong> Reduces spam and ensures only legitimate users gain access.</li>
           <li><strong>Configurable Messaging:</strong> Fully customize the verification instructions and role assignment process.</li>
-          <li><strong>Admin Verification:</strong> Admins can open a verification ticket for a user with<code>/verify-user</code>, assigning the verified role once approved.</li>
+          <li><strong>Admin Verification:</strong> Admins can open a verification ticket for a user with /verify-user, assigning the verified role once approved.</li>
 
         </ul>
       </div>
@@ -182,7 +180,7 @@
       <div class="text">
         <ul>
           <li><strong>Self-Assigned Roles:</strong> Members can pick their roles with a single reaction or button press.</li>
-          <li><strong>Customizable Menus:</strong> Configure menus using emoji-to-role mappings (e.g.,<code>🦁:Africa, 🐼:Asia</code>) with unique labels and descriptions.</li>
+          <li><strong>Customizable Menus:</strong> Configure menus using emoji-to-role mappings (e.g.,🦁:Africa, 🐼:Asia) with unique labels and descriptions.</li>
           <li><strong>Instant Role Updates:</strong> Roles are applied or removed immediately when a user reacts or unreacts.</li>
           <li><strong>Unlimited Configurations:</strong> Create as many reaction role menus as needed for your server.</li>
           <li><strong>Community Organization:</strong> Perfect for assigning interests, access levels, or event roles.</li>
@@ -329,7 +327,7 @@
         <ul>
           <li><strong>UTC Time & Date:</strong> Configure a channel to always show the current UTC time and date.</li>
           <li><strong>Role Count Tracking:</strong> Display how many members hold a specific role in real-time.<br>
-            <em>Example:</em> If 10 users have the role <code>Money</code>, the channel name updates to show “Money: 10”.</em>
+            <em>Example:</em> If 10 users have the role "Money", the channel name updates to show “Money: 10”.</em>
           </li>
         </ul>
       </div>
@@ -348,7 +346,7 @@
       <div class="text">
         <p>Unity also provides helpful tools for everyday use:</p>
         <ul>
-          <li><strong>/get-utc &lt;timezone&gt; &lt;time&gt; [date]</strong> → Convert a local time and date into UTC (e.g.,<code>/get-utc Tokyo 14:30 2025-01-10</code>).</li>
+          <li><strong>/get-utc &lt;timezone&gt; &lt;time&gt; [date]</strong> → Convert a local time and date into UTC (e.g.,/get-utc Tokyo 14:30 2025-01-10).</li>
           <li><strong>/say</strong> → Opens a modal where you type a message the bot will send (Admin only).</li>
           <li><strong>Giveaway Command:</strong> Run server giveaways by setting the prize, how many winners, and the duration.</li>
         </ul>
